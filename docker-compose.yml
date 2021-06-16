@@ -51,7 +51,9 @@ services:
             #dashboard.default_user.login=admin
             EMQX_DASHBOARD__DEFAULT_USER__PASSWORD: "1234"
 
-            #Mongo Connection
+            EMQX_ALLOW_ANONYMOUS: "false"
+
+            
             # MONGO CONNECTION
             EMQX_AUTH__MONGO__TYPE: single
             EMQX_AUTH__MONGO__TOPOLOGY__POOL_SIZE: 1
