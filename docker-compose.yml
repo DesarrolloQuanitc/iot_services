@@ -43,7 +43,9 @@ services:
 
         links: 
           - mongo
-
+        
+        extra_hosts: 
+          - "localhost:192.168.1.79"
 
         environment: 
 
@@ -55,6 +57,9 @@ services:
             #Desafult dash pass
             #dashboard.default_user.login=admin
             EMQX_DASHBOARD__DEFAULT_USER__PASSWORD: "1234"
+
+            #DEFAULT APP SECRET
+            EMQX_MANAGEMENT__DEFAULT_APPLICATION__SECRET: "emqxsecret"
 
             EMQX_ALLOW_ANONYMOUS: "false"
             EMQX_NOMATCH: "deny"
