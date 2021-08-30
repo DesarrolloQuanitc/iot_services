@@ -1,2 +1,6 @@
 mongodata
 .env
+.env
+.log
+app
+mongodata
