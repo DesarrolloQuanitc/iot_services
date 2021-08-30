@@ -18,7 +18,7 @@ services:
     restart: always
     working_dir: /home/node/app
     volumes:
-      - ./mycode/index.js:/home/node/app/index.js
+      - ./app/:/home/node/app
     ports:
       - "3000:3000"
       - "3001:3001"
@@ -28,8 +28,8 @@ services:
       - emqx
       - mongo
 
-    command: sh -c "node index.js"
-    #command: sh -c "npm run build && npm run start"
+    #command: sh -c "node index.js"
+    command: sh -c "npm run build && npm run start"
     #command: sh -c "npm install"
 
   mongo:
